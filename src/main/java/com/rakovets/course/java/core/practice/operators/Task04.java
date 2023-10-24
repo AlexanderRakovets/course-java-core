@@ -37,7 +37,6 @@ class Task04 {
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         float numberTranslateSeconds = 0.001f;
         float numberTranslateMetersSeconds = 0.277777778f;
-        float SOUND_SPEED = 1191.6f;
         float convertMetersSeconds = SOUND_SPEED * (numberTranslateMetersSeconds);
         float convertingMillisecondsSeconds = milliseconds * (numberTranslateSeconds);
         return convertMetersSeconds * convertingMillisecondsSeconds;
