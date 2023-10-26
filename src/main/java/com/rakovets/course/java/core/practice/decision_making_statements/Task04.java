@@ -31,32 +31,32 @@ class Task04 {
     static String getDayOfWeekNumber(byte dayOfWeekNumber) {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        String monthName = null;
+        String weekName = null;
         switch (dayOfWeekNumber) {
             case 1:
-                monthName = "MONDAY";
+                weekName = "MONDAY";
                 break;
             case 2:
-                monthName = "TUESDAY";
+                weekName = "TUESDAY";
                 break;
             case 3:
-                monthName = "WEDNESDAY";
+                weekName = "WEDNESDAY";
                 break;
             case 4:
-                monthName = "THURSDAY";
+                weekName = "THURSDAY";
                 break;
             case 5:
-                monthName = "FRIDAY";
+                weekName = "FRIDAY";
                 break;
             case 6:
-                monthName = "SATURDAY";
+                weekName = "SATURDAY";
                 break;
             case 7:
-                monthName = "SUNDAY";
+                weekName = "SUNDAY";
                 break;
             default:
                 break;
         }
-        return monthName;
+        return weekName;
     }
 }
