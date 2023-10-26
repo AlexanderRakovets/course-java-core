@@ -37,6 +37,21 @@ class Task03 {
     static String getColorHealthPoint(int currentHealthPoint, int maxHealthPoint) {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
+        int playersRealHp = ((currentHealthPoint * 100) / maxHealthPoint );
+
+        if (playersRealHp <= 0) {
+            return null;
+        } else if ( playersRealHp > 100) {
+            return null;
+        } else if (playersRealHp >= 75 && playersRealHp <= 100) {
+            return "GREEN";
+        } else if (playersRealHp <= 75 && playersRealHp >= 50) {
+            return "YELLOW";
+        } else if (playersRealHp <= 50 && playersRealHp >= 25) {
+            return "ORANGE";
+        } else if (playersRealHp <= 25 && playersRealHp > 0) {
+            return "RED";
+        }
         return null;
     }
 }
