@@ -40,6 +40,14 @@ class Task11 {
     static String getSymbolType(char symbol) {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        return null;
+        String montName = "undefined";
+        if ((symbol >= 'a' && symbol <= 'z') || (symbol >= 'A' && symbol <= 'Z')) {
+            montName = "latin";
+        } else if ((symbol >= 'а' && symbol <= 'я') || (symbol >= 'А' && symbol <= 'Я')) {
+            montName = "cyrillic";
+        } else if (symbol >= '0' && symbol <= '9') {
+            montName = "digit";
+        }
+        return montName;
     }
 }
