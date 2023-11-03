@@ -1,4 +1,5 @@
 package com.rakovets.course.java.core.practice.looping_statements;
+
 class Task05 {
     public static void main(String[] args) {
 
@@ -8,18 +9,35 @@ class Task05 {
         String numbersColumn = generateNumbersColumn(numberRows, isEnableHeaderRow);
         System.out.printf("Result:\n%s", numbersColumn);
     }
+
     static String generateNumbersColumn(int numberRows, boolean isEnableHeaderRow) {
-        String numbersColumn = "";
-        if (!isEnableHeaderRow) {
-            for (int firstRowTable = 1; firstRowTable < numberRows ; firstRowTable++) {
-                numbersColumn += firstRowTable + "\n";
+        String result = "";
+//         if (!isEnableHeaderRow) {
+//            for (int firstRowTable = 1; firstRowTable < numberRows ; firstRowTable++) {
+//                numbersColumn += firstRowTable + "\n";
+//            }
+//            numbersColumn += numberRows;
+//        } else {
+//            for (int firstRowTable = 1; firstRowTable < numberRows ; firstRowTable++) {
+//                numbersColumn += "\n" + firstRowTable;
+//            }
+//        }
+        if (isEnableHeaderRow) {
+            result = "\n";
+        }
+        for (int currentRowTable = 1; currentRowTable <= numberRows; currentRowTable++) {
+            if (isEnableHeaderRow && currentRowTable == numberRows) {
+                break;
+            } else {
+                result += currentRowTable;
             }
-            numbersColumn += numberRows;
-        } else {
-            for (int firstRowTable = 1; firstRowTable < numberRows ; firstRowTable++) {
-                numbersColumn += "\n" + firstRowTable;
+
+            if (currentRowTable == numberRows || (isEnableHeaderRow && currentRowTable == numberRows - 1 )) {
+                break;
+            } else {
+                result += "\n";
             }
         }
-        return numbersColumn;
+        return result;
     }
 }
