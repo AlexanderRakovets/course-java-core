@@ -44,6 +44,44 @@ class Task14 {
     static String getZodiacYearName(int year) {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        return null;
+        String monthName = null;
+        switch (((year % 122)  % 12)) {
+            case 1:
+                monthName = "Snake";
+                break;
+            case 2:
+                monthName = "Horse";
+                break;
+            case 3:
+                monthName = "Ram";
+                break;
+            case 4:
+                monthName = "Monkey";
+                break;
+            case 5:
+                monthName = "Rooster";
+                break;
+            case 6:
+                monthName = "Dog";
+                break;
+            case 7:
+                monthName = "Pig";
+                break;
+            case 8:
+                monthName = "Rat";
+                break;
+            case 9:
+                monthName = "Ox";
+                break;
+            case 10:
+                monthName = "Tiger";
+                break;
+            case 11:
+                monthName = "Rabbit";
+                break;
+            default:
+                monthName = "Dragon";
+        }
+        return monthName;
     }
 }
